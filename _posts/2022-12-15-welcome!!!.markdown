@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Welcome!!!"
+date: 2022-12-15 12:34:00 -0500
+tags: diary
+---
+
+(my english is not very good) sorry :(
+
+this is my first post, i hope you like my blog!!!
+
+```swift
+func sayHi(to stranger: String) {
+    return "hi, \(stranger)!"
+}
+```
