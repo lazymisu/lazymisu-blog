@@ -2,6 +2,12 @@
 layout: page
 ---
 
-<center><img src="/assets/img/b.jpg" alt="b.jpg" style="width:300px;height:100px"></center>
+{% if page.banner %}
+    {% assign banner = page.banner %}
+{% else %}
+    {% assign banner = "b.jpg" %}
+{% endif %}
+
+<center><img src="/assets/img/{{ banner }}" alt="{{ banner }}" style="width:300px;height:100px"></center>
 
 {{ content }}
