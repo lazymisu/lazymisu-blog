@@ -13,3 +13,17 @@ body {
     padding: 0px 12px;
     margin: 0px 0px 12px 0px;
 }
+
+h1 {
+    color: #af0a0f;
+    text-align: center;
+}
+
+a, a:visited {
+    
+    color: #34345c;
+
+    &:hover {
+        color: red;
+    }
+}
