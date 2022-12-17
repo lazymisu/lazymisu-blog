@@ -1,7 +1,8 @@
 # lazymisu-blog
 
 <p align="center">
-    <img src="assets/img/master.jpg" alt="master.jpg" />
+    <img src="assets/img/master.jpg" alt="master.jpg"/>
+    <br>
     <small><i>personal diary & dev blog</i></small>
 </p>
 
