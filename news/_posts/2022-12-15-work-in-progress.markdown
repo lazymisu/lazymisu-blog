@@ -9,8 +9,11 @@ Hi, in this section i'll write all my blog updates.
 <!--more-->
 
 To do list:
-- News page
-- Categorized posts
-- Up / down buttons
+- ~~News page~~
+- ~~Categorized posts~~
+- ~~Up / down buttons~~
+- Pinned posts
+- Add post views
+- Tags color schemes
 
 -Misu

@@ -27,3 +27,24 @@ a, a:visited {
         color: red;
     }
 }
+
+.ui {
+    position: fixed;
+    bottom: 8px;
+    right: 510px;
+}
+
+.trow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 13px 0px;
+}
+
+.tag {
+    // color: darkorange;
+    color: darkseagreen;
+}

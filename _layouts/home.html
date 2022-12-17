@@ -27,13 +27,7 @@ layout: default
     <ul>
         {% for new in site.categories['news'] limit:1 %}
             <li>
-                <div style="display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                align-content: center;
-                justify-content: space-between;
-                align-items: center;
-                margin: 13px 0px;">
+                <div class="trow">
                     <div>
                         <a href="/news/">{{ new.title }}</a>
                         &nbsp;
@@ -53,13 +47,19 @@ layout: default
     <ul>
         {% for post in site.categories['posts'] limit:14 %}
             <li>
-                <p>
-                    <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }}: {{ post.title }}</a>
-                </p>
+                <div class="trow">
+                    <div>
+                        <span class="tag">/{{ post.tags | join: "/" }}/</span>
+                        &nbsp;
+                        <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }}: {{ post.title }}</a>
+                        &nbsp;
+                    </div>
+                    <div>0 views</div>
+                </div>
             </li>
         {% endfor %}
         <li>
-            <p><a href="/posts/">[posts]</a></p>
+            <p><a href="/posts/">[more]</a></p>
         </li>
     </ul>
 </div>
