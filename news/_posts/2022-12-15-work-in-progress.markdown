@@ -14,6 +14,7 @@ To do list:
 - ~~Up / down buttons~~
 - Pinned posts
 - Add post views
-- Tags color schemes
+- Random tags color 
+- Wierd banner maker
 
 -Misu
