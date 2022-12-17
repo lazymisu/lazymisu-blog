@@ -6,6 +6,8 @@
     <small><i>personal diary & dev blog</i></small>
 </p>
 
+[https://lazymisu.neocities.org/](https://lazymisu.neocities.org/)
+
 ## useful commands
 
 - `bundle exec jekyll serve`
