@@ -1,0 +1,20 @@
+---
+layout: page
+---
+
+<h1>{{ page.title }}</h1>
+
+{% assign content = content | strip_newlines %}
+{% if content != "" %}
+    <div class="box">
+        {{ content }}
+    </div>
+{% endif %}
+
+{% for new in site.categories['news'] %}
+    <div class="box">
+        <p><a href="{{ page.url }}">{{ new.title }}</a></p>
+        <div>{{ new.content }}</div>
+        <p style="text-align: right;">{{ new.date | date: "%Y-%m-%d" }}</p>
+    </div>
+{% endfor %}
