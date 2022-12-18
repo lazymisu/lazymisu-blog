@@ -48,3 +48,18 @@ a, a:visited {
     // color: darkorange;
     color: darkseagreen;
 }
+
+#wbm-f {
+
+    margin: auto;
+    
+    thead th {
+        font-size: 20px;
+    }
+
+    tbody th {
+        background-color: pink;
+        text-align: left;
+        padding: 0px 8px;
+    }
+}

@@ -1,0 +1,96 @@
+<table id="wbm-f">
+    <thead>
+        <tr>
+            <th colspan="2">Wierd Banner Maker</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Text</th>
+            <td>
+                <input type="text" id="text" name="text"/>
+                <input type="color" id="color" name="color"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Background color</th>
+            <td><input type="color" id="background" name="background"/></td>
+        </tr>
+        <!-- <tr>
+            <th>Image position</th>
+            <td>
+                <input type="radio" name="position" value="1"/> left
+                <input type="radio" name="position" value="2"/> center
+                <input type="radio" name="position" value="3"/> right
+            </td>
+        </tr> -->
+        <tr>
+            <th>Image</th>
+            <td>
+                <input type="file" id="image" name="image" accept="image/*"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Actions</th>
+            <td>
+                <input type="button" id="submit" value="Preview">
+                <input type="button" id="download" value="Download">
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">
+                <div id="preview"></div>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<script src="/assets/js/html2canvas.min.js"></script>
+
+<script>
+
+    document.getElementById("submit").addEventListener("click", function () {
+
+        const text = document.getElementById("text").value;
+        const color = document.getElementById("color").value;
+        const background = document.getElementById("background").value;
+        const image = document.getElementById("image").files[0];
+        const url = URL.createObjectURL(image);
+
+        const html = `
+            <div id="preview" style="width: 300px;
+                height: 100px;
+                background-color: ${background};
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: space-around;
+                align-items: center;">
+                    <span style="font-family: sans-serif; color: ${color}; font-size: 32px; text-align: center;">${text}</span>
+                    <img src="${url}" style="max-height: 80px; max-width: 80px;">
+            </div>
+        `;
+
+        const template = document.createElement('template');
+        template.innerHTML = html.trim();
+
+        document.getElementById("preview").replaceWith(template.content.firstChild);
+    });
+
+    document.getElementById("download").addEventListener("click", function () {
+
+        html2canvas(document.querySelector("#preview")).then(canvas => {
+
+            const image = canvas.toDataURL("image/png");
+
+            const e = document.createElement('a');
+            
+            e.download = 'b.png';
+            e.href = image;
+            e.click();
+        });
+    });
+</script>

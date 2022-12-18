@@ -1,7 +1,7 @@
 ---
 layout: page
-title: test
-permalink: /test/
+title: wierd banner maker
+permalink: /wbm/
 ---
 
-test
+{% include wierd-banner-maker.html %}
