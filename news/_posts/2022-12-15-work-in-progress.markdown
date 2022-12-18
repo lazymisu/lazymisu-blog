@@ -15,6 +15,6 @@ To do list:
 - Pinned posts
 - Add post views
 - Random tags color 
-- Wierd banner maker
+- ~~Wierd banner maker~~
 
 -Misu
